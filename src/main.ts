@@ -1,10 +1,7 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
-import { provideRouter, withEnabledBlockingInitialNavigation } from '@angular/router';
-import { routes } from './app/app-routing.module';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-bootstrapApplication(AppComponent, {
-  providers: [
-    provideRouter(routes, withEnabledBlockingInitialNavigation()),
-  ],
-}).catch((err) => console.error(err));
+import { AppModule } from './app/app.module';
+
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));

@@ -1,26 +1,43 @@
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { RouterModule } from '@angular/router';
-import { routes } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterLink, RouterModule } from '@angular/router';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import {
+  NgxGoogleAnalyticsModule,
+  NgxGoogleAnalyticsRouterModule,
+} from 'ngx-google-analytics';
+import { FooterModule } from './footer/footer.module';
+import { WorkModule } from './work/work.module';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { HomeModule } from './home/home.module';
+import { ContactModule } from './contact/contact.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MobileNavbarComponent } from './mobile-navbar/mobile-navbar.component';
+import { DarkModeToggleButtonModule } from './dark-mode-toggle-button/dark-mode-toggle-button.module';
+import { AboutModule } from './about/about.module';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
-    declarations: [ 
-    ],
-    imports: [
-      BrowserModule,
-      RouterModule.forRoot(routes),
-      AppComponent,
-      NavbarComponent,
-      FooterComponent, 
-      HomeComponent,
-      AboutComponent,
-    ],
-    bootstrap: [],
-  })
-
-  export class AppModule { }
+  declarations: [AppComponent, NavbarComponent, MobileNavbarComponent, ExperienceComponent],
+  imports: [
+    BrowserModule,
+    RouterModule,
+    AppRoutingModule,
+    RouterLink,
+    HttpClientModule,
+    NgxGoogleAnalyticsModule.forRoot('G-XCFJ5ZRZMV'),
+    NgxGoogleAnalyticsRouterModule,
+    FooterModule,
+    WorkModule,
+    AngularSvgIconModule.forRoot(),
+    HomeModule,
+    ContactModule,
+    DarkModeToggleButtonModule,
+    AboutModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}

@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {HomeService} from "./home.service";
+import * as THREE from 'three';
+
 
 @Component({
   selector: 'app-home',
-  imports: [],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './home.component.html'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+  public age: number = 0;
 
+  constructor(private homeService: HomeService) {}
+
+  ngOnInit() {
+    this.age = this.homeService.getAge();
+  }
 }

@@ -1,83 +1,75 @@
 import { Component } from '@angular/core';
-import { Languages } from '../enums/Languages';
-import { Experience } from '../models/Experiences';
+import { Experience } from '../models/Experience';
+import { Languages } from '../enums/ELanguage';
 import { Education } from '../models/Education';
 
 @Component({
   selector: 'app-experience',
-  imports: [],
   templateUrl: './experience.component.html',
-  styleUrl: './experience.component.css'
+  styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
   public experiences: Experience[] = [
     new Experience(
       [
         Languages.Angular,
-        Languages.Ionic,
         Languages.TypeScript,
-        Languages.RxJS,
         Languages.Cypress,
-        Languages.CouchDB,
-        Languages.SCRUM,
+        Languages.SpringBoot,
+        Languages.Java,
+        Languages.Docker,
+        Languages.Git,
       ],
-      'Sep 2023',
-      'Dec 2023',
-      'Calaosoft',
-      'Mobile Developer',
-      'Development of crossplatform, offlinefirst and mobilefirst applications using SCRUM agile methodology.'
+      'May 2024',
+      'Jul 2024',
+      'Arizona State University, Tempe, USA',
+      'Software Engineer',
+      'Developed an AI-powered educational platform using GPT-4, Langchain, and FAISS. Implemented features like Subject Matter Expert system, Job Recommender, and adaptive Exam Prep Aide.'
     ),
     new Experience(
       [
         Languages.Angular,
-        Languages.Ionic,
         Languages.TypeScript,
-        Languages.RxJS,
         Languages.Cypress,
-        Languages.CouchDB,
-        Languages.SCRUM,
+        Languages.SpringBoot,
+        Languages.Java,
+        Languages.Selenium,
       ],
-      'Sep 2022',
-      'Aug 2023',
-      'Calaosoft',
-      'Mobile Developer in apprenticeship',
-      'Development of crossplatform, offlinefirst and mobilefirst applications using SCRUM agile methodology.'
+      'Dec 2022',
+      'Jul 2023',
+      'OpenText, Hyderabad, India',
+      'Software Engineer',
+      'Optimized Angular UI interfaces and REST API interactions to reduce load times by 30%. Led migration projects for Angular and testing frameworks, improving scalability and testing efficiency.'
     ),
     new Experience(
       [
-        Languages.Laravel,
-        Languages.PHP,
-        Languages.JavasScript,
-        Languages.AFrame,
+        Languages.Java,
+        Languages.SpringBoot,
+        Languages.Selenium,
+        Languages.BurpSuite,
+        Languages.Fortify,
       ],
-      'Apr 2022',
-      'Jun 2022',
-      'AFA-MULTIMEDIA',
-      'Internship in Web Developmen',
-      "Development of web applications using A-FRAME, a framework based on Three.js. The apps can be used ''normally'', but also with VR headsets."
+      'Oct 2020',
+      'Dec 2022',
+      'OpenText, Hyderabad, India',
+      'Associate Software Engineer',
+      'Designed cross-database schema relationships for versioning and state management. Executed cloud migration projects and security assessments, enhancing application security by 50%.'
     ),
   ];
 
   public educations: Education[] = [
     new Education(
-      'Sep 2022',
       'Aug 2023',
-      'Clermont Auvergne University (UCA)',
-      'Third year of a computer science degree specializing in mobile application',
+      'May 2025',
+      'Arizona State University, Tempe, USA',
+      "Bachelor's Degree in Computer Science",
       ''
     ),
     new Education(
-      'Sep 2020',
-      'Jun 2022',
-      'Clermont Auvergne University (UCA)',
-      'University Technology Diploma in Computer Science',
-      ''
-    ),
-    new Education(
-      'Sep 2018',
-      'Jul 2020',
-      'Saint-Joseph High School, Marvejols',
-      'Scientific Baccalaureate, specializing in Mathematics',
+      'Aug 2017',
+      'May 2021',
+      'Jawaharlal Nehru Technological University, Hyderabad, India',
+      "College Code: KMIT",
       ''
     ),
   ];

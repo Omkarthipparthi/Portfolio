@@ -280,6 +280,28 @@ img {
   margin-bottom: 10px;
 }
 
+/* .bg-cards {
+    background-color: #292c2e
+} */
+
+/* Mobile */
+
+/* @media screen and (min-width: 970px) {
+    .hamburger {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    .maindiv{
+        display: block;
+    }
+    .burger-menu {
+        display: none;
+    }
+} */
+
+/* Main */
 
 main {
   /* mettre la div sous l'header */
@@ -292,6 +314,85 @@ main {
   flex-direction: row;
 }
 
+/* #earth3D {
+    width: 600px;
+    height: 600px;
+} */
+
+/* .mainContent {
+    margin-top: 100px;
+    width: 60%;
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+} */
+
+/*
+body {
+    background-color: #181a1b;
+    color: #fff;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#nav_img {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+#nav_img > p {
+    align-self: center;
+    margin-left: 20%;
+}
+
+#nav_menu {
+    width: 20%;
+    height: 100%;
+    margin-right: 3%;
+    align-self: center;
+    font-size: 20px;
+}
+
+#nav_menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#nav_menu ol {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#nav_menu li {
+    margin-right: 60px;
+}
+
+#nav_menu_burger {
+    width: 42px;
+    height: 42px;
+    margin-right: 3%;
+    align-self: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    #nav_menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #nav_menu_burger {
+        display: none;
+    }
+}
+*/
 
 span {
   white-space: pre;

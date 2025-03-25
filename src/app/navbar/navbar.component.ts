@@ -1,20 +1,23 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { NavbarService } from '../services/navbar.service';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-navbar',
-  imports: [ RouterModule, CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {
-
+export class NavbarComponent implements AfterViewInit {
   constructor(private navbarService: NavbarService) {}
-  
 
+  ngAfterViewInit(): void {
+    this.navbarService.setMenuWithWidth();
+    this.navbarService.setBurgerMenuSettings(true);
+    this.navbarService.setSettingsNav();
+    this.navbarService.clickMenuEvent();
+  }
+
+  /** This method is called when the user click on the hamburger menu, it show or hide the menu. */
   public clickHamburger(): void {
     this.navbarService.clickHamburger();
   }
-
 }
